@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", init);
 /* ==========================================================================
    Global variables
    ========================================================================== */
@@ -7,6 +6,7 @@ const body = document.querySelector("body");
 /* ==========================================================================
    Initialize
    ========================================================================== */
+document.addEventListener("DOMContentLoaded", init);
 function init() {
   //do stuff after page has loaded
 }
