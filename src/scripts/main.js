@@ -5,6 +5,9 @@ const body = document.querySelector("body");
 const dateDOM = document.querySelector("#date");
 const timeDOM = document.querySelector("#time");
 const jsColorDOM = document.querySelector(".jscolor");
+const titleDOM = document.querySelector("header h1");
+const titleInputDOM = document.querySelector("form input[type='text']");
+const titleSubmitDOM = document.querySelector("form input[type='submit']");
 let date, day, dayName;
 
 /* ==========================================================================
@@ -25,11 +28,21 @@ function init() {
   fetch("scripts/data/tasks.json")
     .then(result => result.json())
     .then(data => displayTasks(data));
+
+  //onClick on title submit button
+  titleSubmitDOM.addEventListener("click", updateTitle);
 }
 
 /* ==========================================================================
    Functions
    ========================================================================== */
+
+//Update title
+function updateTitle(e) {
+  e.preventDefault();
+  titleDOM.textContent = titleInputDOM.value;
+  titleInputDOM.value = "";
+}
 
 // Display the time in binary, 12-hours format with AM or PM
 function displayTime() {

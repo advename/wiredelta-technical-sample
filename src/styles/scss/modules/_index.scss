@@ -15,7 +15,6 @@
 
   #primary {
     margin-top: 5vh;
-    height: 70vh;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -25,7 +24,7 @@
     > div {
       grid-column: span 3;
       border-radius: 10px;
-      padding: 30px;
+      padding: 0px 30px;
       h2 {
         font-size: 30px;
         margin-bottom: 30px;
@@ -34,7 +33,7 @@
 
     #tasks {
       .container {
-        height: 70vh;
+        height: 60vh;
         overflow-y: auto;
         .task {
           padding: 10px;
