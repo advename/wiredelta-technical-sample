@@ -68,6 +68,7 @@ function binaryNumber(numb) {
   return numb > 9 ? numb.toString() : "0" + numb;
 }
 
+//Display the tasks using the <template />
 function displayTasks(data) {
   const template = document.querySelector("#task-template").content;
   const container = document.querySelector("#tasks .container");
@@ -86,7 +87,7 @@ function displayTasks(data) {
   });
 }
 
+//Change background color using jsColor
 function changeBackground(jscolor) {
-  console.log("Yee" + jscolor);
   body.style.background = "#" + jscolor;
 }
